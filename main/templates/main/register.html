@@ -1,0 +1,81 @@
+{% extends "main/base.html" %}
+
+{% block script %}
+    $(document).ready(function() {
+        $("#user_name").blur(function(){
+            var user_name = $(this).val();
+            $.get('/api/check-exist/' + user_name,
+                function(data){
+                    var code = data.code;
+                    if(code == 0) {
+                        var exist = data.data.exist;
+                        if(exist) {
+                            alert("用户名[ " + user_name + " ]已存在!");
+                        }
+                    }
+                },'json'
+            );
+        });
+        $("#email_address").blur(function(){
+            var email = $("#email_address");
+            if(email.val() == ''){
+                email.focus();
+            }
+        });
+        $("#pwd").blur(function(){
+            var pwd1 = $("#password");
+            var pwd2 = $("#pwd");
+            if(pwd1.val() != pwd2.val()){
+                alert("两次输入密码不一致!");
+            }
+        });
+    });
+{% endblock %}
+
+{% block header %}
+        <div class="top-bar">
+            <a href="/user/login/">登录</a>
+            <span class="pip">|</span>
+            <a href="/user/reg-user">注册</a>
+        </div>
+{% endblock %}
+
+{% block middle %}
+    <div class="reg-img">
+        <img src="/static/img/register-bg.png">
+    </div>
+    <div class="reg-box">
+        <form method="post" enctype="application/x-www-form-urlencoded" action="/user/reg-user/">
+            {% csrf_token %}
+            <div class="row">
+                <label>邮箱</label>
+                <span>
+                    <input id="email_address" type="text" name="email_address">
+                </span>
+            </div>
+            <div class="row">
+                <label>用户名</label>
+                <span>
+                    <input id="user_name" type="text" name="user_name">
+                </span>
+            </div>
+            <div class="row">
+                <label>密码</label>
+                <span>
+                    <input id="password" type="password" name="password">
+                </span>
+            </div>
+            <div class="row">
+                <label>密码确认</label>
+                <span>
+                    <input id="pwd" type="password" name="pwd">
+                </span>
+            </div>
+            <div class="row">
+                <span>
+                    <input type="submit" id="submit" value="注册" class="button">
+                </span>
+            </div>
+        </form>
+    </div>
+{% endblock %}

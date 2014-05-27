@@ -1,0 +1,24 @@
+{% extends "main/home.html" %}
+
+
+{% block script %}
+    $(document).ready(function() {
+        var val = '{{ menu_active }}';
+        showTransform(val);
+    });
+{% endblock %}
+
+{% block right %}
+
+    {% if image_list %}
+        <div class="image-item-list">
+            {% for image in image_list %}
+                <div class="image-item">
+                    <div>上传于 {{ image.create_time | date:'Y-m-d H:i:s' }}</div>
+                    <img src="/static/upload/big/{{image.pic_save_name}}">
+                    <span>{{ image.title }}</span>
+                </div>
+            {% endfor%}
+        </div>
+    {% endif %}
+{% endblock %}

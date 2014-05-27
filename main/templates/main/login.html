@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+
+
+{% block header %}
+        <div class="top-bar">
+            <a href="/user/login/">登录</a>
+            <span class="pip">|</span>
+            <a href="/user/reg-user">注册</a>
+        </div>
+{% endblock %}
+
+{% block middle %}
+    <div class="super-login">
+        <h2>会员登陆</h2>
+        <div id="main" class="login-box">
+            <form method="post" action="/user/login/">
+                {% csrf_token %}
+                <div class="row">
+                    <label>账户</label>
+                    <input type="text" name="user_name" maxlength="64">
+                </div>
+                <div class="row">
+                    <label>密码</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="row">
+                    <input type="submit" class="bigbtn" value="登录">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

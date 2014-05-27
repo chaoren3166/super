@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+
+{% block header %}
+        <div class="top-bar">
+            <label>欢迎你</label>
+            <a href="/user/{{user.id}}">{{ user.user_name }}</a>
+        </div>
+{% endblock %}
+
+{% block middle %}
+        <div class="left">
+            <div class="menu-group">
+                <div class="menu-type">
+                    <img src="/static/img/icon-100.png">
+                    <span>
+                        菜单
+                    </span>
+                </div>
+
+                <a href="/album/mine/{{ user.id }}">
+                    <div id="my-album" class="menu-item menu-item-selected corner">
+                            我的相册
+                    </div>
+                </a>
+
+                <a href="/album/friends/">
+                    <div id="friend-album" class="menu-item corner">
+                            朋友相册
+                    </div>
+                </a>
+
+                <a href="/album/upload/">
+                    <div id="upload-pic" class="menu-item corner">
+                            发真相
+                    </div>
+                </a>
+
+                <a href="/moods/">
+                    <div id="moods" class="menu-item corner">
+                            心情
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            {% block right %}
+                <div>欢迎光临</div>
+            {% endblock %}
+        </div>
+        <div style="clear: both;"></div>
+{% endblock %}

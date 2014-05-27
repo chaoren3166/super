@@ -1,0 +1,16 @@
+{% extends "main/home.html" %}
+
+{% block right %}
+
+    <div class="pf-items">
+        <div class="profile-item">
+            <div class="item-type">用户名</div>
+            <div class="item-text">{{detail_user.user_name}}</div>
+        </div>
+        <div class="profile-item">
+            <div class="item-type">邮箱</div>
+            <div class="item-text">{{detail_user.email_address}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,231 @@
+html {
+	background-color: #EEEEEE;
+}
+
+html, button, input, select, textarea {
+	font-family: arial,STHeiti,'Microsoft YaHei',\5b8b\4f53;
+}
+
+html, body, h1, h2, h3, h4, p, ul, li, input, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F0F3F5;
+}
+
+label {
+    display: inline;
+}
+
+.super-header {
+    background-color:black;
+}
+
+.super-header .top-bar {
+    height: 44px;
+    line-height: 44px;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.super-header .top-bar a {
+    color: #00B3FC;
+    text-decoration: none;
+}
+
+.super-header .top-bar label {
+    color: #00B3FC;
+}
+
+.super-middle {
+    margin-top: 10px;
+}
+
+.super-middle .super-container {
+    max-width: 960px;
+    margin: 0px auto;
+    background-color: #FFFFFF;
+}
+
+.super-middle .left {
+    width: 20%;
+    margin-left: 10px;
+    float: left;
+}
+
+.super-middle .left .menu-group {
+    margin-bottom: 50px;
+}
+
+.super-middle .left .menu-group .menu-type {
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 24px;
+    color: #8A9197;
+    vertical-align: middle;
+}
+
+.menu-group a {
+    text-decoration: none;
+}
+
+.super-middle .left .menu-group .menu-type img {
+    vertical-align: middle;
+}
+
+.super-middle .left .menu-group .menu-type span {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.menu-group .menu-item {
+    margin: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #F0F3F5;
+}
+
+.menu-group .menu-item-selected {
+    background-color: #97A9B7;
+    color: #FFFFFF;
+}
+
+.corner {
+    border-radius: 5px;
+}
+
+.super-middle .right {
+    width: 75%;
+    margin-left: 3%;
+    float:left;
+}
+
+.super-middle .reg-img {
+    float: left;
+}
+
+.super-middle .reg-box {
+    float: left;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.super-middle .reg-box .row span {
+    margin-left: 70px;
+}
+
+.super-middle .reg-box .row label {
+    text-align: right;
+    position: absolute;
+    height: 33px;
+    line-height: 33px;
+}
+
+.super-middle .reg-box .button {
+    width: 208px;
+    background: #45D112;
+    border-radius: 3px;
+}
+
+.super-login {
+    padding: 10px;
+}
+
+.super-login h2{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+}
+
+.login-box {
+    padding-top: 10px;
+}
+
+.super-login .row {
+    margin: 0;
+}
+
+.super-footer {
+    clear: both;
+    text-align: center;
+    line-height: 150%;
+    font-family: Microsoft Yahei;
+    font-size: 12px;
+    margin-top: 400px;
+}
+
+.super-footer a {
+    color: #00B3FC;
+}
+
+.pip {
+    color: #ddd;
+    margin: 0 5px;
+}
+
+.pf-items {
+    clear:both;
+    margin:10px;
+    border: 1px solid #EEEEEE;
+    border-bottom: 0px;
+}
+
+.pf-items .profile-item {
+    padding: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.pf-items .profile-item .item-type {
+    float: left;
+    width: 25%;
+    color: #999999;
+    font-size: 100%;
+}
+
+.pf-items .profile-item .item-text {
+    font-size: 100%;
+}
+
+.upload textarea {
+    width: 100%;
+}
+
+.upload .submit {
+    width: 208px;
+    background: #45D112;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.image-item-list {
+
+}
+
+.image-item-list .image-item {
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.image-item-list .image-item img {
+    width: 100%;
+}
+
+.image-item-list .image-item span {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+}

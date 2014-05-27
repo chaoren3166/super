@@ -1,0 +1,13 @@
+{% extends "main/home.html" %}
+
+{% block script %}
+    $(document).ready(function() {
+        var val = '{{ menu_active }}';
+        showTransform(val);
+    });
+{% endblock %}
+
+{% block right %}
+
+    好友相册列表
+{% endblock %}

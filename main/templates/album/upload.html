@@ -1,0 +1,27 @@
+{% extends "main/home.html" %}
+
+{% block script %}
+    $(document).ready(function() {
+        var val = '{{ menu_active }}';
+        showTransform(val);
+    });
+{% endblock %}
+
+{% block right %}
+
+    <div class="upload">
+        <form action="/album/upload/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="hidden" value="{{user.id}}" name="user_id">
+            <div>
+                <input size="20" type="file" name="my_img" value="选择图片">
+            </div>
+            <div>
+                <textarea id="title" rows="12" name="title" placeholder="填写图片描述"></textarea>
+            </div>
+            <div>
+                <input class="submit" type="submit" value="上传">
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+.idea/
+.idea/*.xml
+*.pyc
+main/*.pyc
+main/api/*.pyc
+main/config/*.pyc
+main/manager/*.pyc
+main/service/*.pyc
+main/views/*.pyc
+main/logs/*.log
+main/static/upload/big/*
+main/static/upload/small/*

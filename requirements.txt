@@ -1,0 +1,7 @@
+Django==1.6.2
+requests==2.2.1
+MySQL-python==1.2.5
+twisted==13.2.0
+kronos==0.2.2
+gunicorn==18.0
+pillow==2.4.0
